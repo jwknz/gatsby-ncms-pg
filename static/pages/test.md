@@ -1,9 +1,9 @@
 ---
-path: /pages/my-first-post
+path: /notices/test1
 date: '2017-11-07'
 title: My first blog post
 ---
 
-# here is a test
+# THIS IS A NOTICE
 
 This markdown file was created in VSCODE

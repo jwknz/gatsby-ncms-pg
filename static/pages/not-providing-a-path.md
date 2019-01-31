@@ -1,5 +1,5 @@
 ---
-path: /pages/test2
+path: /blog/test1
 date: 2019-01-31T05:20:54.488Z
 title: Not Providing a path
 ---
