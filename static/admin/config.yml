@@ -1,0 +1,28 @@
+backend:
+  name: github
+  repo: jwknz/gatsby-ncms-pg
+
+media_folder: static/media
+public_folder: pages
+
+collections:
+
+  - name: pages
+    label: Pages
+    folder: static/pages
+    create: true
+    fields:
+      - { name: path, label: Path }
+      - { name: date, label: Date, widget: date }
+      - { name: title, label: Title }
+      - { name: body, label: Body, widget: markdown }
+
+  - name: stuff
+    label: Stuff
+    folder: static/stuff
+    create: true
+    fields:
+      - { name: path, label: Path }
+      - { name: date, label: Date, widget: date }
+      - { name: title, label: Title }
+      - { name: body, label: Body, widget: markdown }
