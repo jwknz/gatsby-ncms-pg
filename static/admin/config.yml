@@ -29,7 +29,7 @@ collections:
 
   - name: notice
     label: Notice
-    folder: static/notice
+    folder: static/notices
     create: true
     fields:
       - { name: path, label: Path }
