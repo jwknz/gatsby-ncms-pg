@@ -11,9 +11,10 @@ collections:
   - name: pages
     label: Pages
     folder: static/pages
+    filter: {field: "section", value: "main"}
     create: true
     fields:
-      - { name: path, label: Path }
+      - {label: "Section", name: "section", widget: "select", options: ["main", "notices", "something else"]}
       - { name: date, label: Date, widget: date }
       - { name: title, label: Title }
       - { name: body, label: Body, widget: markdown }
