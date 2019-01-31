@@ -13,8 +13,8 @@ collections:
     folder: static/pages
     filter: {field: "section", value: "main"}
     create: true
-    path: /pages/index
     fields:
+      - { name: path, label: Path }
       - {label: "Section", name: "section", widget: "select", options: ["main", "notices", "something else"]}
       - { name: date, label: Date, widget: date }
       - { name: title, label: Title }
@@ -26,8 +26,8 @@ collections:
     filter: {field: "section", value: "notices"}
     create: true
     slug: "{{year}}-{{month}}-{{day}}_{{slug}}"
-    path: /notices
     fields:
+      - { name: path, label: Path }
       - {label: "Section", name: "section", widget: "select", options: ["main", "notices", "something else"]}
       - { name: date, label: Date, widget: date }
       - { name: title, label: Title }
