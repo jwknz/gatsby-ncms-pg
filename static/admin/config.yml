@@ -8,7 +8,7 @@ media_folder: static/media
 collections:
   - name: "business"
     label: "Business Blog"
-    folder: "_posts/business/"
+    folder: "static/pages/"
     create: true
     delete: true
     filter:
