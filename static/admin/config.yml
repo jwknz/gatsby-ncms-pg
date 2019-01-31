@@ -20,7 +20,7 @@ collections:
 
   - name: stuff
     label: Stuff
-    folder: static/pages
+    folder: static/stuff
     create: true
     fields:
       - { name: path, label: Path }
@@ -29,8 +29,8 @@ collections:
       - { name: body, label: Body, widget: markdown }
 
   - name: notice
-    label: Notice
-    folder: static/pages
+    label: Notices
+    folder: static/notices
     create: true
     fields:
       - { name: path, label: Path }
@@ -40,7 +40,7 @@ collections:
 
   - name: blog
     label: Blog
-    folder: static/pages
+    folder: static/blog
     create: true
     fields:
       - { name: path, label: Path }
@@ -50,7 +50,7 @@ collections:
 
   - name: blogging
     label: Blogging
-    folder: static/pages
+    folder: static/blogging
     create: true
     fields:
       - { name: path, label: Path }
