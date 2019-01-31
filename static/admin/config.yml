@@ -8,11 +8,25 @@ media_folder: static/media
 
 collections:
 
-  - name: pages
-    label: Pages
+  - name: home
+    label: Home
     folder: static/pages
     filter: {field: "section", value: "main"}
     create: true
+    path: /pages/index
+    fields:
+      - {label: "Section", name: "section", widget: "select", options: ["main", "notices", "something else"]}
+      - { name: date, label: Date, widget: date }
+      - { name: title, label: Title }
+      - { name: body, label: Body, widget: markdown }
+
+  - name: notices
+    label: Notices
+    folder: static/pages
+    filter: {field: "section", value: "notices"}
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}_{{slug}}"
+    path: /notices
     fields:
       - {label: "Section", name: "section", widget: "select", options: ["main", "notices", "something else"]}
       - { name: date, label: Date, widget: date }
@@ -22,16 +36,6 @@ collections:
   - name: stuff
     label: Stuff
     folder: static/stuff
-    create: true
-    fields:
-      - { name: path, label: Path }
-      - { name: date, label: Date, widget: date }
-      - { name: title, label: Title }
-      - { name: body, label: Body, widget: markdown }
-
-  - name: notice
-    label: Notices
-    folder: static/notices
     create: true
     fields:
       - { name: path, label: Path }
