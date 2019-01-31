@@ -1,0 +1,64 @@
+backend:
+  name: github
+  repo: jwknz/gatsby-ncms-pg
+  publish_mode: editorial_workflow
+
+media_folder: static/media
+#public_folder: pages
+
+collections:
+
+  - name: home
+    label: Home
+    folder: static/pages
+    filter: {field: "section", value: "main"}
+    create: true
+    fields:
+      - { name: path, label: Path }
+      - {label: "Section", name: "section", widget: "select", options: ["main", "notices", "something else"]}
+      - { name: date, label: Date, widget: date }
+      - { name: title, label: Title }
+      - { name: body, label: Body, widget: markdown }
+
+  - name: notices
+    label: Notices
+    folder: static/pages
+    filter: {field: "section", value: "notices"}
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}_{{slug}}"
+    fields:
+      - { name: path, label: Path, wid }
+      - {label: "Section", name: "section", widget: "select", options: ["main", "notices", "something else"]}
+      - { name: date, label: Date, widget: date }
+      - { name: title, label: Title }
+      - { name: body, label: Body, widget: markdown }
+
+  - name: stuff
+    label: Stuff
+    folder: static/stuff
+    create: true
+    fields:
+      - { name: path, label: Path }
+      - { name: date, label: Date, widget: date }
+      - { name: title, label: Title }
+      - { name: body, label: Body, widget: markdown }
+
+  - name: blog
+    label: Blog
+    folder: static/blog
+    create: true
+    fields:
+      - { name: path, label: Path }
+      - { name: date, label: Date, widget: date }
+      - { name: title, label: Title }
+      - { name: body, label: Body, widget: markdown }
+
+  - name: blogging
+    label: Blogging
+    folder: static/blogging
+    create: true
+    fields:
+      - { name: path, label: Path }
+      - { name: date, label: Date, widget: date }
+      - { name: title, label: Title }
+      - { name: body, label: Body, widget: markdown }

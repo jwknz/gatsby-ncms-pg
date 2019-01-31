@@ -1,4 +1,5 @@
 ---
+path: /pages/index
 section: main
 date: 2019-01-31T08:33:58.923Z
 title: Testing the main section
