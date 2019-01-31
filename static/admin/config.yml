@@ -1,9 +1,10 @@
 backend:
   name: github
   repo: jwknz/gatsby-ncms-pg
+  publish_mode: editorial_workflow
 
 media_folder: static/media
-public_folder: pages
+#public_folder: pages
 
 collections:
 
