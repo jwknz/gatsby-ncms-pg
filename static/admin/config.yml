@@ -13,9 +13,9 @@ collections:
     filter: {field: "section", value: "main"}
     create: true
     delete: true
+    section: main
     fields:
       - { name: path, label: Path }
-      - { label: "Section", name: "section", widget: "select", options: ["main"]}
       - { name: date, label: Date, widget: date }
       - { name: title, label: Title }
       - { name: body, label: Body, widget: markdown }
@@ -26,9 +26,9 @@ collections:
     filter: {field: "section", value: "notices"}
     create: true
     delete: true
+    section: notices
     fields:
       - { name: path, label: Path }
-      - { label: "Section", name: "section", widget: "select", options: ["notices"]}
       - { name: date, label: Date, widget: date }
       - { name: title, label: Title }
       - { name: body, label: Body, widget: markdown }
