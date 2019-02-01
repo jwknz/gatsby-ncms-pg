@@ -1,4 +1,5 @@
 ---
+path: /slugging
 layout: post
 author: Jeffrey Kranenburg
 title: Practice Fun
