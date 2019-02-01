@@ -6,48 +6,29 @@ backend:
 media_folder: static/media
 
 collections:
-  - name: "business"
-    label: "Business Blog"
-    folder: "static/pages/"
+
+  - name: main
+    label: Main Pages
+    folder: static/pages
+    filter: {field: "section", value: "main"}
     create: true
     delete: true
-    filter:
-      - field: "categories"
-        value: "business"
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      - label: "Layout"
-        name: "layout"
-        widget: "hidden"
-        default: "post"
+      - { name: path, label: Path }
+      - { label: "Section", name: "section", widget: "select", options: ["main"]}
+      - { name: date, label: Date, widget: date }
+      - { name: title, label: Title }
+      - { name: body, label: Body, widget: markdown }
 
-      - label: "Author"
-        name: "author"
-        widget: "string"
-
-      - label: "Title"
-        name: "title"
-        widget: "string"
-
-      - label: "Date"
-        name: "date"
-        widget: "datetime"
-
-      - label: "Category"
-        name: "categories"
-        widget: "select"
-        options: 
-          - label: "Business"
-            value: "business"
-
-      - label: "Description"
-        name: "description"
-        widget: "text"
-
-      - label: "Image"
-        name: "image"
-        widget: "string"
-
-      - label: "Body"
-        name: "body"
-        widget: "markdown"
+  - name: notices
+    label: Notices
+    folder: static/pages
+    filter: {field: "section", value: "notices"}
+    create: true
+    delete: true
+    fields:
+      - { name: path, label: Path }
+      - { label: "Section", name: "section", widget: "select", options: ["notices"]}
+      - { name: date, label: Date, widget: date }
+      - { name: title, label: Title }
+      - { name: body, label: Body, widget: markdown }
