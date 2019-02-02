@@ -14,7 +14,7 @@ collections:
     delete: true
     fields:
       - { name: path, label: Path }
-      - { name: section, label: Section, widget: List, default: ["main", "notices"]}
+      - { name: section, label: Section, widget: list, default: ["main", "notices"]}
       - { name: date, label: Date, widget: date }
       - { name: title, label: Title }
       - { name: body, label: Body, widget: markdown }
