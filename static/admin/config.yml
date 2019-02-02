@@ -7,13 +7,13 @@ media_folder: static/media
 
 collections:
 
-  - name: new
+  - name: newpage
     label: New Page or Notice
     folder: static/drafts
     create: true
     delete: true
     fields:
-      - { name: path, label: Path }
+      - { name: path, label: Path, default: "/{section}}/{title}"}
       - { label: Section, name: section, widget: list, options: ["main", "notices"], default: ["notices"], allow_add: false}
       - { name: date, label: Date, widget: date }
       - { name: title, label: Title }
