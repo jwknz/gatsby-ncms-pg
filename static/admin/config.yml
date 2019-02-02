@@ -7,12 +7,22 @@ media_folder: static/media
 
 collections:
 
+  - name: new
+    label: New Page or Notice
+    folder: static/drafts
+    create: true
+    delete: true
+    fields:
+      - { name: path, label: Path }
+      - { name: section, label: Section, widget: List, default: ["main", "notices"]}
+      - { name: date, label: Date, widget: date }
+      - { name: title, label: Title }
+      - { name: body, label: Body, widget: markdown }
+
   - name: main
     label: Main Pages
     folder: static/pages
     filter: {field: "section", value: "main"}
-    create: true
-    delete: true
     section: main
     fields:
       - { name: path, label: Path }
@@ -24,9 +34,6 @@ collections:
     label: Notices
     folder: static/pages
     filter: {field: "section", value: "notices"}
-    create: true
-    delete: true
-    section: notices
     fields:
       - { name: path, label: Path }
       - { name: date, label: Date, widget: date }
